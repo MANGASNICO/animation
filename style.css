@@ -1,54 +1,29 @@
-*{
+* {
     margin: 0;
-    padding:0 ;
+    padding: 0;
     box-sizing: border-box;
+
 }
-body{
+
+body {
     background-color: blue;
 }
-.cuadrado{
-    margin-top: 200px;
-    background: gold;
-    width: 200px;
-    height: 200px;
-    transition: all 3s;
-}
 
-              
-              
-.cuadrado:hover{
-    animation-name: surprise;
-        -webkit-animation-name: surprise;
-        -moz-animation-name: surprise;
-    animation-duration: .8s;
-        -webkit-animation-duration: .8s;
-        -moz-animation-duration: .8s;
-}
-
-    @keyframes cuadrado
-    {
-        0% 
-        {transform: rotate(0deg) scale(1,1);;}
-        10% 
-        {transform: rotate(7deg) scale(2,2);}
-        20% 
-        {transform: rotate(-7deg) scale(2,2);}
-        30%
-         {transform: rotate(7deg) scale(2,2);}
-        40% 
-        {transform: rotate(-7deg) scale(2,2);}
-        50%
-         {transform: rotate(7deg) scale(2,2);}
-        60% 
-        {transform: rotate(-7deg) scale(2,2);}
-        70% 
-        {transform: rotate(7deg) scale(2,2);}
-        80% 
-        {transform: rotate(-7deg) scale(2,2);}
-        90% 
-        {transform: rotate(7deg) scale(2,2);}
-        100% 
-        {transform: rotate(0deg) scale(1,1);}
+@keyframes fantasma {
+    0% {
+        opacity: 0%;
     }
-              
-            
+
+    25% {
+        transform: translateY(20px);
+        opacity: 100%;
+    }
+
+    100% {
+        opacity: 0%;
+    }
+}
+
+.fantasma {
+    animation: fantasma 10s infinite;
+}
